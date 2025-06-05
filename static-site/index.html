@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>面试助手</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(to bottom, #f5f7fa, #e4e8f0);
+            min-height: 100vh;
+        }
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4f46e5;
+        }
+        nav {
+            display: none;
+        }
+        @media (min-width: 768px) {
+            nav {
+                display: flex;
+                gap: 1.5rem;
+            }
+        }
+        nav a {
+            color: #4b5563;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #4f46e5;
+        }
+        .section {
+            padding: 4rem 0;
+            background-color: #fff;
+        }
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #1f2937;
+        }
+        .services {
+            margin-top: 2rem;
+        }
+        .service {
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4f46e5;
+            margin-bottom: 1rem;
+        }
+        .service-desc {
+            margin-bottom: 1.5rem;
+            color: #4b5563;
+        }
+        .feature-list {
+            list-style: none;
+        }
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+        }
+        .feature-icon {
+            color: #4f46e5;
+            margin-right: 0.5rem;
+        }
+        .feature-text {
+            color: #4b5563;
+        }
+        .service-image {
+            width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            margin-top: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .video-demo {
+            margin-top: 3rem;
+            text-align: center;
+        }
+        .video-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #4f46e5;
+            margin-bottom: 1rem;
+        }
+        .video-container {
+            max-width: 400px;
+            margin: 0 auto;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        video {
+            width: 100%;
+            height: auto;
+        }
+        footer {
+            background-color: #1f2937;
+            color: #9ca3af;
+            padding: 2rem 0;
+        }
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        @media (min-width: 768px) {
+            .footer-content {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+        .footer-logo {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        .footer-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        @media (min-width: 768px) {
+            .footer-links {
+                margin-top: 0;
+            }
+        }
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover {
+            color: #fff;
+        }
+        .copyright {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">面试助手</div>
+            <nav>
+                <a href="#">首页</a>
+                <a href="#interview-assistance">面试辅助</a>
+                <a href="#interview-coaching">面试辅导</a>
+                <a href="#resume-modification">简历优化</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">提供的服务</h2>
+            
+            <div class="services">
+                <!-- 面试辅助 -->
+                <div id="interview-assistance" class="service">
+                    <h3 class="service-title">面试辅助</h3>
+                    <p class="service-desc">
+                        提供实时智能化面试支持，通过屏幕共享和GPT最新模型 4o 4.1 秒出答案，让您在面试中以最佳状态脱颖而出，大幅提升面试成功率。
+                    </p>
+                    <ul class="feature-list">
+                        <li class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">开会议（腾讯/飞书/Zoom等）共享我的屏幕给你</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">如果你需要共享屏幕，就使用两个设备，一个开我这边会议</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">你打开跟我会议的麦克风，公放面试电脑设备的声音，我这边就能听到，我共享我的屏幕</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">给GPT4o合适的prompt引导GPT回答</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">支持定制知识库</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">算法题题目拍照微信发我或者口述</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">图片直接生成最优代码、详细注释、思路、算法复杂度</span>
+                        </li>
+                    </ul>
+                    <img src="fuzhu.jpg" alt="面试辅助服务" class="service-image">
+                </div>
+                
+                <!-- 面试辅导 -->
+                <div id="interview-coaching" class="service">
+                    <h3 class="service-title">面试辅导</h3>
+                    <p class="service-desc">
+                        量身定制的面试策略和全方位训练计划，基于您的个人背景和目标公司文化，精准把握面试要点，显著提升您的竞争力和自信心。
+                    </p>
+                    <ul class="feature-list">
+                        <li class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">有大量春招秋招社招面试题</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">根据你的简历公司岗位辅导</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">进行面试模拟</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">纠正建议</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">汇总面试常见问题</span>
+                        </li>
+                    </ul>
+                    <img src="interview-assistance.jpg" alt="面试辅导服务" class="service-image">
+                </div>
+                
+                <!-- 简历优化 -->
+                <div id="resume-modification" class="service">
+                    <h3 class="service-title">简历优化</h3>
+                    <p class="service-desc">
+                        量身定制的简历优化服务，提升您的简历竞争力，显著增加面试机会。
+                    </p>
+                    <ul class="feature-list">
+                        <li class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">专业简历分析与评估，针对性提出改进建议</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">重新组织工作经验，突出成就和数据化结果</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">优化技能描述，使用行业关键词提高ATS通过率</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">量身定制简历模板，提升视觉吸引力和专业度</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">针对目标公司和岗位定制简历内容，提高匹配度</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">一对一的简历优化指导，打造让HR和招聘经理无法拒绝的简历</span>
+                        </li>
+                    </ul>
+                    <img src="interview-coaching.jpg" alt="简历优化服务" class="service-image">
+                </div>
+            </div>
+            
+            <!-- 测速视频展示 -->
+            <div class="video-demo">
+                <h4 class="video-title">实时响应演示</h4>
+                <div class="video-container">
+                    <video controls poster="fuzhu.jpg">
+                        <source src="speed-test.mp4" type="video/mp4">
+                        您的浏览器不支持视频标签。
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-logo">面试助手</div>
+                    <p>您的专业面试伙伴</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">服务条款</a>
+                    <a href="#">隐私政策</a>
+                    <a href="#">联系我们</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 面试助手. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
