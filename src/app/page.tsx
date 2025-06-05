@@ -22,6 +22,9 @@ export default function Home() {
               <Link href="#resume-modification" className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400">
                 简历优化
               </Link>
+              <Link href="/agent" className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400">
+                客服
+              </Link>
             </nav>
           </div>
         </div>
